@@ -1,0 +1,47 @@
+.CartMenu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 100%;
+  background-color: #A1D9C3;
+  border-radius:  2px 0 0 2px;
+  padding-left: 12px;
+  z-index: 150;
+  user-select: none;  
+}
+
+.CartMenu svg{
+  width: 32px;
+  height: 24px;
+}
+
+.CartMenu h3{
+  height: 32px;
+  width: 32px;
+  margin-top: 20px;
+}
+
+.Modal{
+  height: 50%;
+}
+
+.ModalContainer{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.NoItems{
+  padding: 10px;
+  
+}
+
+@media(max-width: 599px){
+  .Modal{
+    height: 70%;
+  }
+}

@@ -1,0 +1,47 @@
+.Catalogs {
+  width: 100%;
+  height: 100%;
+}
+
+.TableContainer {
+  width: 100%;
+  height: 30%;
+}
+
+.Modal {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.SpinnerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Inputs input {
+  width: 250px;
+  margin: 10px;
+}
+
+.Inputs select {
+  width: 250px;
+  margin: 10px;
+}
+
+.ModalContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ModalContainer div {
+  display: flex;
+  justify-content: center;
+}

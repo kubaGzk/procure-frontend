@@ -1,0 +1,50 @@
+.SideDrawerIcons {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f4f4f4;
+  width: 56px;
+  margin: 0;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: outset;
+  box-shadow: inset 10px -40px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.IconList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  z-index: 110;
+}
+
+.Toggler {
+  box-sizing: border-box;
+  position: fixed;
+  top: 300px;
+  left: 56px;
+  height: 200px;
+  width: 20px;
+  z-index: 200;
+  background-color: #a1d9c3;
+  padding: 0;
+  border-radius: 0px 30px 30px 0px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.Open {
+  left: 206px;
+}
+
+@media (max-width: 599px) {
+  .SideDrawerIcons {
+    display: none;
+  }
+}

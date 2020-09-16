@@ -1,0 +1,43 @@
+.TableBody {
+  overflow: auto;
+  display: block;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+
+.TableBody tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+}
+
+.TableBody td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+  text-align: left;
+  padding: 6px 6px 6px 16px;
+}
+
+.StatusBox {
+  max-width: 100px;
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+
+.TableBody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}

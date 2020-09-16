@@ -1,0 +1,45 @@
+.TabsControls {
+  height: 40px;
+  width: 100%;
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.TabsControls div {
+  display: flex;
+  width: 150px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #bebebe;
+  box-sizing: border-box;
+  border-left: 1px solid black;
+  text-transform: capitalize;
+  cursor: pointer;
+  user-select: none;
+}
+
+.TabsControls div:first-of-type {
+  border-radius: 5px 0 0 0;
+  border: none;
+}
+
+.TabsControls div:last-of-type {
+  border-radius: 0 5px 0 0;
+}
+
+.TabsControls div:hover {
+  background-color: #a7a7a7;
+}
+
+.TabsControls div:active {
+  background-color: #f4f4f4;
+}
+
+.Active {
+  background-color: #a1d9c3 !important;
+}
+.Active:hover {
+  background-color: #a1d9c3 !important;
+}

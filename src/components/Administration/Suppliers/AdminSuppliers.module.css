@@ -1,0 +1,39 @@
+.Suppliers {
+  width: 100%;
+  height: 100%;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.SupplierForm {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+.SupplierForm input {
+  width: 210px;
+}
+
+.TableContainer {
+  width: 100%;
+  height: 90%;
+}
+
+.Modal {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.SpinnerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}

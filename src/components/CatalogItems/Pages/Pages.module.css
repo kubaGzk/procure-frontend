@@ -1,0 +1,47 @@
+.Pages{
+    margin: 5px 5px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 80;
+    background-color: #A1D9C3;
+    padding: 2px 4px 2px 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  
+}
+
+.Pages h3{
+    margin: 0 2px 0 0;
+}
+
+
+.PageItem{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    margin: 4px;
+    color: #f4f4f4;
+}
+
+.PageItem:hover{
+    color: black;
+}
+
+
+
+.Active{
+    font-weight: bold;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.None{
+    display: none;
+}

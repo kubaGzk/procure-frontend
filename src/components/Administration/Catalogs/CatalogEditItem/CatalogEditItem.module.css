@@ -1,0 +1,11 @@
+.FormContainer{
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+
+}
+
+.FormContainer form{
+    width: 90%;
+    padding: 5px 15px;
+}

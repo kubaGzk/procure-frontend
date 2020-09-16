@@ -1,0 +1,33 @@
+.Container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Container h3{
+      padding-left: 10px;
+  }
+
+
+  .TableContainer{
+      height: 90%;
+      padding: 10px;
+      
+  }
+
+  .ItemMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 599px) {
+
+    .Container{
+      height: 75%;
+    }
+
+    .ItemMenu div {
+        display: none;
+      }
+  }

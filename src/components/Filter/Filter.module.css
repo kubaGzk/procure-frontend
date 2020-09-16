@@ -1,0 +1,67 @@
+.Filter{
+    display: flex;
+    background-color: #f4f4f4;
+    margin: 2px 0 2px 0;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+    z-index: 80;
+}
+
+.FilterList{
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 6px 0;
+}
+
+.ListHeader{
+    width: 90%;
+    user-select: none;
+    background-color:  #A1D9C3;
+    border-radius: 3px;
+    margin-bottom: 0;
+}
+
+
+
+.ListItem{
+    height: 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-out;
+    display: flex;
+}
+
+.Hidden{
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+}
+
+.Hidden div{
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+}
+
+
+.Toggler{
+    margin: 8px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 85;
+}
+.Toggler:hover{
+    color: grey;
+}
+
+.PriceRange{
+    display: flex;
+    box-sizing: border-box;
+    padding: 2px 5px 5px 5px;
+}
+.PriceRange span{
+    margin: auto;
+    padding-top: 35px;
+}

@@ -1,0 +1,44 @@
+.Container {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  margin: 5px 5px 0 0;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.ItemMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ItemMenu svg{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.ItemMenu p{
+  display: none;
+}
+
+
+@media (max-width: 599px){
+  .ItemMenu div{
+    display: none;
+  }
+  .ItemMenu p{
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 8px;
+  }
+  
+
+  .ItemMenu svg{
+    width: 16px;
+    height: 16px;
+  }
+}

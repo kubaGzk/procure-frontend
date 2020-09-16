@@ -1,0 +1,83 @@
+.History{
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    width: 20%;
+    margin-left: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    
+}
+
+.List{
+    list-style: none;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 50vh;
+}
+
+.ListItem{
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2px;
+    
+}
+
+.ListItem p{
+    padding: 1px;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.OrdersList{
+    list-style: none;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 30vh;
+    
+}
+
+.OrdersListItem{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2px;
+
+}
+
+
+.OrderControls{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+.OrderControls button{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media(max-width:599px){
+    .History{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}

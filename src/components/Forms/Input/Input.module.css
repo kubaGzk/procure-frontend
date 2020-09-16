@@ -1,0 +1,105 @@
+.Input{
+    text-align: left;  
+    margin: 0;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.Checkbox{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Checkbox input{
+    margin: 0;
+    
+}
+
+.Checkbox label{
+    padding-left: 5px;
+    padding-bottom: 2px;
+    user-select: none;
+}
+
+.InputElement{
+    width: 100%;
+    outline: none;
+    border-radius: 2px;
+    border: solid 1px #f2f2f2;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 4px;
+    color: #3e6679;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.32);
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.32);
+
+}
+.InputElement::placeholder{
+    color: #3e6679;
+    font-style: italic;
+}
+
+.InputElement:focus{
+    border-color:#e0e0e0;
+    border: 1px solid;
+}
+
+.Label{
+    display: block;
+}
+
+.Indicator{
+    background: #18bd62;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px 15px 15px 0px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.Legend{
+    margin-bottom: 15px;
+}
+
+.Invalid{
+    border: solid 1px red;
+}
+
+.FieldError{
+    margin: 2px 0px 2px 0px;
+    max-height: 40px;
+    opacity: 1;
+    transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: red;
+}
+
+.FieldErrorNone{
+  transition: all .2s ease-in;
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  color: red;
+}
+
+.Input input::-webkit-outer-spin-button,
+.Input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media (max-width: 499px){
+    .InputElement{
+        width: 100%;
+    }
+}

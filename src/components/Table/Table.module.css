@@ -1,0 +1,49 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.Table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.Table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+.Table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-transform: capitalize;
+  background-color: #a1d9c3;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  color: white;
+  width: 100%;
+}
+.Scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  display: block;
+  background-color: inherit;
+  border: none;
+}
+
+@media (max-width: 599px) {
+  .Table {
+    font-size: 0.6rem;
+  }
+
+  .Table td {
+    padding: 4px;
+  }
+
+  .Container {
+    height: 80%;
+  }
+}

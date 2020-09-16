@@ -1,0 +1,17 @@
+.MobileButtons{
+    display: flex;
+    margin-left: 10px;
+}
+
+.MobileButtons button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+}
+
+@media(min-width: 600px){
+    .MobileButtons{
+        display: none;
+    }
+}

@@ -1,0 +1,58 @@
+.LabelItem{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    z-index: 95;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+
+}
+.Link{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+}
+
+
+
+.Hover{
+    background-color: #808080b2;
+
+}
+
+.Active{
+    background-color: #A1D9C3;
+    background: rgba(161, 217, 195, 0.3)
+}
+
+.Hover.Active{
+    background-color: rgba(161, 217, 195, 0.5);
+}
+
+.Hide{
+    height: 0px;
+    opacity: 0;
+    padding: 0px;
+    z-index: 40;
+}
+
+.Dropdown{
+    width: 10%;
+    box-sizing: border-box;
+    padding: 6px 24px 0px 0px;
+}
+
+.Dropdown svg{
+    height: 20px;
+    width: 20px;
+}

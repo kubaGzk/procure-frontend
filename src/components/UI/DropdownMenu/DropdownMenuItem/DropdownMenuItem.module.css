@@ -1,0 +1,32 @@
+.MenuItem {
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    border-bottom: 1px solid grey;
+    background-color: #ffffff;
+    transition: all 0.3s ease-out;
+  }
+  .MenuItem:last-child {
+    border: none;
+  }
+  
+  .MenuItem:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .Hidden {
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+
+  .None{
+    display: none;
+  }

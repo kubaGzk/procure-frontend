@@ -1,0 +1,77 @@
+.CatalogItem {
+    width: 290px;
+    height: 430px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 2px 5px 2px;
+    position: relative;
+    z-index: 80;
+}
+
+.CatalogItem button{
+    background-color: #60a378;
+}
+
+.AddSection{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0px 5px 5px 5px;
+}
+.AddSection div{
+    margin: 0;
+}
+.AddSection input{
+    width: 30%;
+}
+ 
+.AddSection button{
+    width: 60%;
+    height: 50%;
+    margin-top: 30px;
+}
+
+
+.ProductSection{
+    margin-top: 240px;
+    width: 100%;
+}
+
+.ProductSection p, h4{
+    margin: 4px; text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+}
+.ProductSection a{
+    text-decoration: none;
+    color: black;
+}
+.ProductSection a:hover{
+    text-decoration: none;
+    color: grey;
+}
+.ImgSection{
+    position: absolute;
+    top: 5px
+}
+
+.ImgSection img{
+    width: 230px;
+    height: 230px;
+}
+.ImgSection img:hover{
+    width: 240px;
+    height: 240px;
+}
+
+@media(max-width: 350px){
+    .CatalogItem{
+        margin: 10px 1px;
+    }
+}
+

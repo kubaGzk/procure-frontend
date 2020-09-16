@@ -1,0 +1,26 @@
+.MobileToggler{
+    margin: 1px;
+    padding: 5px 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+
+.MobileToggler svg{
+    height: 32px;
+    width: 32px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    color: #3e6679;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    
+}
+
+@media(min-width: 600px){
+    .MobileToggler{
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+.Tiles{
+    box-sizing: border-box;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,25 @@
+.Header {
+    background-color: #f4f4f4;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .Header svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .Header h2 {
+    margin:  0 10px;
+  }
+
+  .Status{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

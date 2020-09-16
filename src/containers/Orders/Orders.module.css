@@ -1,0 +1,60 @@
+.RequestsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 5px 5%;
+  overflow: auto;
+height: 100%;
+padding-bottom: 30px;
+}
+
+.SearchForm{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  
+    width: 100%;
+}
+
+.InputsContainer {
+    padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.InputsContainer input{
+    width: 250px;
+}
+.InputsContainer select{
+    width: 250px;
+}
+
+.ButtonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;    
+}
+
+.ButtonsContainer button{
+  margin-left: 0;
+}
+
+.SearchButton {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.TableContainer {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px;
+}

@@ -1,0 +1,10 @@
+
+
+.CatalogItems {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    z-index: inherit;
+  }
+

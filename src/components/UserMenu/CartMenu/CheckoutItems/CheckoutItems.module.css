@@ -1,0 +1,39 @@
+.Container {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 85%;
+}
+.ItemMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ItemMenu svg {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.ItemMenu p {
+  display: none;
+  margin: 0;
+}
+
+@media (max-width: 599px) {
+  .ItemMenu div {
+    display: none;
+  }
+  .ItemMenu p {
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 8px;
+  }
+  .Container{
+    height: 75%;
+  }
+}

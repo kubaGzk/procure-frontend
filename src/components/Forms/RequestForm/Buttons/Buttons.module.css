@@ -1,0 +1,24 @@
+.Buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.Button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
+}
+
+
+@media (max-width: 599px){
+    .Buttons{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+}
