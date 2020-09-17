@@ -13,7 +13,11 @@ import Modal from "../../UI/Modal/Modal";
 import Input from "../../Forms/Input/Input";
 
 import classes from "./AdminSuppliers.module.css";
-import { copyObject } from "../../../utility/utility";
+import {
+  copyObject,
+  checkLatinChars,
+  checkNumberChars,
+} from "../../../utility/utility";
 import Toast from "../../UI/Toast/Toast";
 
 const INITAL_FORM = {
@@ -190,16 +194,31 @@ class AdminSuppliers extends Component {
   }
 
   onInputChange = (e, inpType) => {
+    let targetValue = e.target.value;
+
+    if (inpType === "country" || inpType=== "city") {
+      targetValue = checkLatinChars(e.target.value);
+    }
+
+    if (inpType === "phone") {
+      targetValue = checkNumberChars(e.target.value);
+    }
+
     const validObj = validation(
-      e.target.value,
+      targetValue,
       this.state.supplierForm[inpType].validationRules
     );
+
+    if (targetValue.length === 0) {
+      validObj.valid = true;
+      validObj.foundErrors = {};
+    }
 
     const newForm = {
       ...this.state.supplierForm,
       [inpType]: {
         ...this.state.supplierForm[inpType],
-        value: e.target.value,
+        value: targetValue,
         touched: true,
         valid: validObj.valid,
         errorMessages: validObj.foundErrors,
@@ -392,9 +411,9 @@ class AdminSuppliers extends Component {
   showToast = (message) => {
     this.setState({ toastMessage: message, toastVisible: true });
 
-    if(this.timerOut){
-    clearTimeout(this.timerOut);
-  }
+    if (this.timerOut) {
+      clearTimeout(this.timerOut);
+    }
     this.timerOut = setTimeout(() => {
       this.setState({ toastMessage: "", toastVisible: false });
     }, 3000);

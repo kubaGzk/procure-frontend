@@ -1,5 +1,6 @@
 import * as actionTypes from "../actionTypes";
 import validation from "../../utility/validation";
+import { checkNumberChars, checkLatinChars } from "../../utility/utility";
 
 const initialState = {
   requestId: "",
@@ -188,7 +189,6 @@ const requestCheckoutFailed = (state, action) => {
   return { ...state, loading: false, error: action.error };
 };
 const requestCheckoutSuccess = (state, action) => {
-
   let addressData = { ...state.address };
 
   if (action.data.address) {
@@ -228,8 +228,6 @@ const requestCheckoutSuccess = (state, action) => {
     },
     address: addressData,
   };
-
-
 
   newState.submitDisabled = !(
     newState.title.valid &&
@@ -322,15 +320,25 @@ const requestFormEdit = (state, action) => {
   const newState = { ...state, address: { ...state.address } };
 
   if (action.key === "address") {
+    let targetValue = action.value;
+
+    if (action.childKey === "country" || action.childKey === "city") {
+      targetValue = checkLatinChars(action.value);
+    }
+
     const validObj = validation(
-      action.value,
+      targetValue,
       state.address[action.childKey].validationRules
     );
 
+    if (targetValue.length === 0) {
+      validObj.valid = true;
+      validObj.foundErrors = {};
+    }
 
     newState.address[action.childKey] = {
       ...state.address[action.childKey],
-      value: action.value,
+      value: targetValue,
       touched: true,
       valid: validObj.valid,
       errorMessages: validObj.foundErrors,
