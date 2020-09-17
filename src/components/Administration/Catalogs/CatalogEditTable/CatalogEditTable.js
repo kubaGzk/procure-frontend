@@ -1,9 +1,9 @@
 import React from "react";
+
 import Table from "../../../Table/Table";
+import Button from "../../../UI/Button/Button";
 
 import classes from "./CatalogEditTable.module.css";
-import TableDropdownItem from "../../../UI/TableDropdownItem/TableDropdownItem";
-import Button from "../../../UI/Button/Button";
 
 const CatalogEditTable = (props) => {
   const headers = ["name", "price", "edit"];

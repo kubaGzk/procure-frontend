@@ -1,6 +1,6 @@
 import * as actionTypes from "../actionTypes";
 import validation from "../../utility/validation";
-import { checkNumberChars, checkLatinChars } from "../../utility/utility";
+import { checkLatinChars } from "../../utility/utility";
 
 const initialState = {
   requestId: "",

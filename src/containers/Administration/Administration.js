@@ -1,14 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
-import axios from "../../axios/axios-default";
 
 import Tabs from "../../components/Tabs/Tabs";
 import Tab from "../../components/Tabs/Tab/Tab";
-
-import classes from "./Administration.module.css";
 import AdminCatalogs from "../../components/Administration/Catalogs/AdminCatalogs";
 import AdminSuppliers from "../../components/Administration/Suppliers/AdminSuppliers";
 import AdminUsers from "../../components/Administration/Users/AdminUsers";
+
+import classes from "./Administration.module.css";
 
 class Administration extends React.Component {
   state = {

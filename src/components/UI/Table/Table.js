@@ -1,8 +1,9 @@
 import React from "react";
-import classes from "./Table.module.css";
+
 import TableHeader from "./TableHeader/TableHeader";
 import TableBody from "./TableBody/TableBody";
-import Spinner from "../Spinner/Spinner";
+
+import classes from "./Table.module.css";
 
 const Table = (props) => {
   return (
