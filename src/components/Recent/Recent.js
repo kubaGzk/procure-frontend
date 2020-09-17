@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import classes from "./Recent.module.css";
 
 const Recent = (props) => {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   let tableHeaders = [
     { header: "ID", id: "id", mobile: true },
