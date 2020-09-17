@@ -314,6 +314,10 @@ const requestChangeSubmit = (state, action) => {
   return initialState;
 };
 
+const requestClearError = (state, action) => {
+  return { ...state, error: null };
+};
+
 const requestFormEdit = (state, action) => {
   //action.value, action.key, action.childKey
 
@@ -429,6 +433,9 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.REQUEST_FORM_EDIT:
       return requestFormEdit(state, action);
+
+    case actionTypes.REQUEST_CLEAR_ERROR:
+      return requestClearError(state, action);
 
     default:
       return state;

@@ -15,16 +15,13 @@ import Modal from "../../components/UI/Modal/Modal";
 import classes from "./Catalogs.module.css";
 import Toast from "../../components/UI/Toast/Toast";
 
-
 class Catalogs extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.timerTimeout = null;
-
   }
-  
+
   state = {
     catalogViewOptions: {
       itemsPerPage: {
@@ -108,9 +105,9 @@ class Catalogs extends React.Component {
     }
   }
 
-  componentWillUnmount(){
-    if(this.timerTimeout){
-      clearTimeout(this.timerTimeout)
+  componentWillUnmount() {
+    if (this.timerTimeout) {
+      clearTimeout(this.timerTimeout);
     }
   }
 
@@ -200,12 +197,11 @@ class Catalogs extends React.Component {
     this.setState({ toastVisible: true, toastMessage: "Item has been added!" });
     this.props.addItem(item, countItem);
 
-    if(this.timerTimeout){
-      clearTimeout(this.timerTimeout)
+    if (this.timerTimeout) {
+      clearTimeout(this.timerTimeout);
     }
-    
-    this.timerTimeout = setTimeout(() => {
 
+    this.timerTimeout = setTimeout(() => {
       this.setState({ toastVisible: false, toastMessage: "" });
     }, 1000);
   };
@@ -354,6 +350,7 @@ class Catalogs extends React.Component {
           message={this.state.toastMessage}
           show={this.state.toastVisible}
         />
+        <Toast message={this.props.error} show={this.props.error} />
       </div>
     );
   }
@@ -369,6 +366,7 @@ const mapStateToProps = (state) => {
     currentPage: state.catalog.currentPage,
     numberPages: state.catalog.numberPages,
     activeFilters: state.catalog.activeFilters,
+    error: state.catalog.err,
   };
 };
 

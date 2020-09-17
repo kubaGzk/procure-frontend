@@ -99,7 +99,13 @@ export const catalogFetchInit = (queryData, dispatch) => {
         })
         .catch((err) => {
           console.log(err);
-          dispatch(catalogFetchFailed(err));
+          
+          let errMessage = "Unexpected error.";
+          if (err.response && err.response.data && err.response.data.message) {
+            errMessage = err.response.data.message;
+          }
+  
+          dispatch(catalogFetchFailed(errMessage));
         });
     }
 
@@ -115,7 +121,13 @@ export const catalogFetchInit = (queryData, dispatch) => {
       })
       .catch((err) => {
         console.log(err);
-        dispatch(catalogFetchFailed(err));
+
+        let errMessage = "Unexpected error.";
+        if (err.response && err.response.data && err.response.data.message) {
+          errMessage = err.response.data.message;
+        }
+
+        dispatch(catalogFetchFailed(errMessage));
       });
   };
 };

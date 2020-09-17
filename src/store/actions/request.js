@@ -89,7 +89,14 @@ export const sendRequest = (dispatch) => {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((resp) => dispatch(checkoutSuccess(resp.data.request)))
-      .catch((err) => dispatch(checkoutFailed(err.message)));
+      .catch((err) => {
+        let errMessage = "Unexpected error.";
+        if (err.response && err.response.data && err.response.data.message) {
+          errMessage = err.response.data.message;
+        }
+        dispatch(changeRequestFailed(errMessage));
+        setTimeout(() => dispatch(clearError()), 3000);
+      });
   };
 };
 
@@ -231,6 +238,17 @@ export const changeRequest = (requestId, changeType, dispatch) => {
       .then((resp) => {
         dispatch(changeRequestSuccess(changeType, resp.data));
       })
-      .catch((err) => dispatch(changeRequestFailed(err)));
+      .catch((err) => {
+        let errMessage = "Unexpected error.";
+        if (err.response && err.response.data && err.response.data.message) {
+          errMessage = err.response.data.message;
+        }
+        dispatch(changeRequestFailed(errMessage));
+        setTimeout(() => dispatch(clearError()), 3000);
+      });
   };
+};
+
+export const clearError = () => {
+  return { type: actionTypes.REQUEST_CLEAR_ERROR };
 };

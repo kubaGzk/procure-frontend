@@ -14,6 +14,7 @@ import Button from "../../components/UI/Button/Button";
 import { Link } from "react-router-dom";
 
 import classes from "./Request.module.css";
+import Toast from "../../components/UI/Toast/Toast";
 
 class Request extends React.Component {
   state = {
@@ -73,22 +74,23 @@ class Request extends React.Component {
           headers: { Authorization: `Bearer ${this.props.token}` },
         })
         .then((resp) => {
-
-          this.setState({
-            localRequestId: queryRequestId,
-            localDisplayId: resp.data.requestId,
-            localOwner: resp.data.creator,
-            localRequestItems: resp.data.items,
-            localRequestStatus: resp.data.status,
-            localTitle: resp.data.title || this.state.localTitle,
-            localDescription:
-              resp.data.description || this.state.localDescription,
-            localCostCenter: resp.data.costCenter || this.state.localCostCenter,
-            localAddress: resp.data.address || this.state.localAddress,
-            localHistory: resp.data.history,
-            localOrders: resp.data.orders,
-            loading: false,
-          });
+          if (resp)
+            this.setState({
+              localRequestId: queryRequestId,
+              localDisplayId: resp.data.requestId,
+              localOwner: resp.data.creator,
+              localRequestItems: resp.data.items,
+              localRequestStatus: resp.data.status,
+              localTitle: resp.data.title || this.state.localTitle,
+              localDescription:
+                resp.data.description || this.state.localDescription,
+              localCostCenter:
+                resp.data.costCenter || this.state.localCostCenter,
+              localAddress: resp.data.address || this.state.localAddress,
+              localHistory: resp.data.history,
+              localOrders: resp.data.orders,
+              loading: false,
+            });
         })
         .catch((err) => console.log(err));
     }
@@ -104,7 +106,6 @@ class Request extends React.Component {
   }
 
   componentDidUpdate() {
-
     const queryRequestId = this.props.match.params.requestId;
 
     if (
@@ -120,21 +121,23 @@ class Request extends React.Component {
           headers: { Authorization: `Bearer ${this.props.token}` },
         })
         .then((resp) => {
-          this.setState({
-            localRequestId: queryRequestId,
-            localDisplayId: resp.data.requestId,
-            localOwner: resp.data.creator,
-            localRequestItems: resp.data.items,
-            localRequestStatus: resp.data.status,
-            localTitle: resp.data.title || this.state.localTitle,
-            localDescription:
-              resp.data.description || this.state.localDescription,
-            localCostCenter: resp.data.costCenter || this.state.localCostCenter,
-            localAddress: resp.data.address || this.state.localAddress,
-            localHistory: resp.data.history,
-            localOrders: resp.data.orders,
-            loading: false,
-          });
+          if (resp)
+            this.setState({
+              localRequestId: queryRequestId,
+              localDisplayId: resp.data.requestId,
+              localOwner: resp.data.creator,
+              localRequestItems: resp.data.items,
+              localRequestStatus: resp.data.status,
+              localTitle: resp.data.title || this.state.localTitle,
+              localDescription:
+                resp.data.description || this.state.localDescription,
+              localCostCenter:
+                resp.data.costCenter || this.state.localCostCenter,
+              localAddress: resp.data.address || this.state.localAddress,
+              localHistory: resp.data.history,
+              localOrders: resp.data.orders,
+              loading: false,
+            });
         });
     }
 
@@ -162,6 +165,10 @@ class Request extends React.Component {
         localOrders: null,
         localRequestStatus: "",
       });
+    }
+
+    if (this.props.error && this.state.deleting) {
+      this.setState({ deleting: false, showModal: false });
     }
   }
 
@@ -317,7 +324,8 @@ class Request extends React.Component {
     } else if (
       this.state.deleting &&
       !this.props.loading &&
-      !this.props.error
+      !this.props.error &&
+      this.props.requestId === ""
     ) {
       modalContent = (
         <div>
@@ -376,7 +384,7 @@ class Request extends React.Component {
         }
       );
 
-      //ORDERS DISABLED
+    //ORDERS DISABLED
     // this.state.localRequestStatus === "approved" &&
     //   buttonsType.unshift({ name: "orders", onClick: this.getOrders });
 
@@ -406,6 +414,7 @@ class Request extends React.Component {
     } else if (this.props.requestId !== "" && this.props.requestItems) {
       view = (
         <div className={classes.Container}>
+          <Toast show={this.props.error} message={this.props.error} />
           <RequestHeader
             buttonsType={buttonsType}
             displayId={this.props.displayId}
