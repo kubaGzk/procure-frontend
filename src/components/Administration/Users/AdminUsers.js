@@ -331,7 +331,7 @@ class AdminUsers extends Component {
       data: { active: !deactivateUser.active, id: this.state.userId },
     })
       .then((resp) => {
-        console.log("THEN");
+
         if (resp) {
           this.setState({
             modalLoading: false,
@@ -346,7 +346,7 @@ class AdminUsers extends Component {
       })
       .catch((err) => {
         console.log(err);
-        console.log("CATCH");
+
         this.setState({
           modalLoading: false,
           modalConfirm: false,
