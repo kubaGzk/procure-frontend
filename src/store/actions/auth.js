@@ -80,8 +80,11 @@ export const auth = (email, password) => {
         );
       })
       .catch((err) => {
-
-        dispatch(authFailed(err.response.data.message));
+        let errMessage = "Unexpected error.";
+        if (err.response && err.response.data && err.response.data.message) {
+          errMessage = err.response.data.message;
+        }
+        dispatch(authFailed(errMessage));
       });
   };
 };
