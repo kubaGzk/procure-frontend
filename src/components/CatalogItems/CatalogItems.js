@@ -18,7 +18,7 @@ const catalogItems = (props) => {
           key={item.id}
           id={item.id}
           parent={item.catalog.id}
-          picture={process.env.REACT_APP_BACKEND_URL+'/' + item.image}
+          picture={process.env.REACT_APP_S3_URL+'/' + item.image}
           productName={item.name}
           productDescription={item.description}
           supplier={item.supplier.name}

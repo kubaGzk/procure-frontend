@@ -56,7 +56,7 @@ class ShowItem extends React.Component {
           <div className={classes.ImageContainer}>
             <img
               src={
-                process.env.REACT_APP_BACKEND_URL+'/' + this.state.itemData.image
+                process.env.REACT_APP_S3_URL+'/' + this.state.itemData.image
               }
               alt={`Item ${this.state.itemData.id}`}
             ></img>
